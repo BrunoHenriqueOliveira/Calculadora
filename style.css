@@ -1,0 +1,39 @@
+body{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    border-color: azure;
+}
+
+input{
+    color: white;
+    background-color: slategray;
+    padding: 17px;
+    outline: none;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 50%;
+}
+
+#tela{
+    border-radius: 20px;
+}
+
+.tela{
+    width: 160px;
+    height: 26px;
+    border-radius: 22x;
+    letter-spacing: 5px;
+}
+
+.main{
+    display: inline-block;
+}
+
+.num{
+    width: 64px;
+    height: 67px;
+}
