@@ -4,40 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/apple-touch-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
 </head>
 <body>
 
-    <form name="Calculator">
-        <input type="text" name="tela" id="tela" disabled><br>
-
-        <input type="button" value="C" onclick="location.reload()">
-        <input type="button" value="()">
-        <input type="button" value="%">
-        <input type="button" value="/" onclick="displaynum(divbtn.value)"><br>
+    <div id="calculadora">
+        <p id="resultado"></p>
+        <table>
+            <tr>
+                <td><button onclick="clean()">C</button></td>
+                <td><button onclick="back()">&lt</button></td>
+                <td><button onclick="insert('/')">/</button></td>
+                <td><button onclick="insert('*')">*</button></td>
         
-        <input type="button" name="btn7" value="7" onclick="displaynum(btn7.value)">
-        <input type="button" name="btn8" value="8" onclick="displaynum(btn8.value)">
-        <input type="button" name="btn9" value="9" onclick="displaynum(btn9.value)">
-        <input type="button" name="mulbtn" value="x" onclick="displaynum(mulbtn.value)"><br>
-
-        <input type="button" name="btn4" value="4" onclick="displaynum(btn4.value)">
-        <input type="button" name="btn5" value="5" onclick="displaynum(btn5.value)">
-        <input type="button" name="btn6" value="6" onclick="displaynum(btn6.value)">
-        <input type="button" name="subbtn" value="-" onclick="displaynum(subbtn.value)"><br>
-
-        <input type="button" name="btn1" value="1" onclick="displaynum(btn1.value)">
-        <input type="button" name="btn2" value="2" onclick="displaynum(btn2.value)">
-        <input type="button" name="btn3" value="3" onclick="displaynum(btn3.value)">
-        <input type="button" name="addbtn" value="+" onclick="displaynum(addbtn.value)"><br>
-
-        <input type="button" value="+/-">
-        <input type="button" name="btn" value="0" onclick="displaynum">
-        <input type="button" name="dot" value="," onclick="displaynum(dotbtn.value)">
-        <input type="button" value="=">
-    </form>
-
+            </tr>
+            <tr>
+                <td><button onclick="insert('7')">7</button></td>
+                <td><button onclick="insert('8')">8</button></td>
+                <td><button onclick="insert('9')">9</button></td>
+                <td><button onclick="insert('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="insert('4')">4</button></td>
+                <td><button onclick="insert('5')">5</button></td>
+                <td><button onclick="insert('6')">6</button></td>
+                <td><button onclick="insert('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="insert('1')">1</button></td>
+                <td><button onclick="insert('2')">2</button></td>
+                <td><button onclick="insert('3')">3</button></td>
+                <td rowspan="2"><button style="height: 106px;" onclick="calcular()">=</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button style="width: 107px;"  onclick="insert('0')">0</button></td>
+                <td><button onclick="insert('.')">.</button></td>
+            </tr>
+        </table>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
